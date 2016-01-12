@@ -1,17 +1,49 @@
 {
+  "projectUrl": "https://github.com/elastic/elasticsearch-net",
+  "licenseUrl": "https://github.com/elastic/elasticsearch-net/blob/master/license.txt",
+  "summary": "Official high level Elasticsearch client",
+  "description": "Strongly typed interface to Elasticsearch. Fluent and classic object initializer mappings of requests and responses. Uses and exposes Elasticsearch.Net",
+  "title": "NEST - Elasticsearch .NET client",
+  "tags": [ "elasticsearch", "elastic", "search", "lucene", "nest" ],
+  "copyright": "2014-2015 Elasticsearch BV",
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "warningsAsErrors": false
+  },
   "supports": {
     "net46.app": {},
     "uwp.10.0.app": {},
     "dnxcore50.app": {}
   },
   "dependencies": {
+    "Elasticsearch.Net": "",
     "Newtonsoft.Json": "7.0.1",
     "Microsoft.NETCore": "5.0.0",
-    "Microsoft.NETCore.Portable.Compatibility": "1.0.0" 
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.0"  
+  },
+  "commands": {
+
   },
   "frameworks": {
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Runtime": "",
+        "System.Runtime.Serialization": "",
+        "System.ServiceModel": ""
+      }
+    },
     "dotnet": {
-      "imports": "portable-net452+win81"
+      "compilationOptions": { "define": [ "DOTNETCORE" ] },
+      "imports": "portable-net452+win81",
+      "dependencies": {
+        "System.Runtime": "4.0.1-beta-23225",
+        "System.Linq": "4.0.0-beta-23109",
+        "System.Linq.Queryable": "4.0.0-beta-23109",
+        "System.Collections": "4.0.11-beta-23225",
+        "System.Dynamic.Runtime": "4.0.11-beta-23225",
+        "System.Threading": "4.0.11-beta-23225",
+        "System.Threading.Timer": "4.0.0-beta-23109"
+      }
     }
   }
 }

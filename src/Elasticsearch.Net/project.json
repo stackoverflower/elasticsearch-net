@@ -1,4 +1,15 @@
 {
+  "projectUrl": "https://github.com/elastic/elasticsearch-net",
+  "licenseUrl": "https://github.com/elastic/elasticsearch-net/blob/master/license.txt",
+  "summary": "Official low level Elasticsearch client",
+  "description": "Exposes all the api endpoints but leaves you in control of building the request and response bodies. Comes with built in cluster failover/connection pooling support.",
+  "title": "Elasticsearch.NET - Official low level Elasticsearch client",
+  "tags": [ "elasticsearch", "elastic", "search", "lucene", "nest" ],
+  "copyright": "2014-2015 Elasticsearch BV",
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "warningsAsErrors": false
+  },
   "supports": {
     "net46.app": {},
     "uwp.10.0.app": {},
@@ -8,9 +19,42 @@
     "Microsoft.NETCore": "5.0.0",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.0"
   },
+  "commands": {
+
+  },
   "frameworks": {
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Runtime": "",
+        "System.Runtime.Serialization": "",
+        "System": ""
+      }
+    },
     "dotnet": {
-      "imports": "portable-net452+win81"
+      "compilationOptions": { "define": [ "DOTNETCORE" ] },
+      "imports": "portable-net452+win81",
+      "dependencies": {
+        "System.Runtime": "4.0.1-beta-23225",
+        "System.Collections": "4.0.11-beta-23225",
+        "System.Reflection": "4.1.0-beta-23225",
+        "System.Collections.Specialized": "4.0.0-beta-23109",
+        "System.Linq": "4.0.0-beta-23109",
+        "System.IO.Compression": "4.0.0-beta-23109",
+        "System.Runtime.Serialization.Primitives": "4.0.10-beta-23109",
+        "System.Text.RegularExpressions": "4.0.10-beta-23109",
+        "System.Collections.Concurrent": "4.0.10-beta-23109",
+        "System.Reflection.Extensions": "4.0.0-beta-23109",
+        "System.Reflection.TypeExtensions": "4.0.0-beta-23109",
+        "System.Reflection.Metadata": "1.1.0-alpha-00009",
+        "System.Reflection.Primitives": "4.0.0-beta-23109",
+        "System.Linq.Expressions": "4.0.10-beta-23109",
+        "System.Dynamic.Runtime": "4.0.11-beta-23225",
+        "Microsoft.CSharp": "4.0.1-beta-23225",
+        "System.Security.Cryptography.Encoding": "",
+        "System.Security.Cryptography.X509Certificates": "",
+        "System.ComponentModel.TypeConverter": "4.0.0-beta-23109",
+        "System.Net.Http": "4.0.1-beta-23225",
+      }
     }
   }
 }
