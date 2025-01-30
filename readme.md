@@ -46,6 +46,10 @@ NEST is the official high-level .NET client of [elasticsearch](https://github.co
 * Takes advantage of .NET features where they make sense (i.e., covariant `IEnumerable<T>` result types, type and index inference)
 * All calls have async variants
 * Test
+* Made some more changes here
+
+<table>
+  <td>Table is here</td>
 
 ## Getting Started
 
