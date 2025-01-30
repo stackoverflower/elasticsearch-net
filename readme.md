@@ -45,6 +45,7 @@ NEST is the official high-level .NET client of [elasticsearch](https://github.co
 * Comes with a very powerful query DSL that maps one-to-one with Elasticsearch
 * Takes advantage of .NET features where they make sense (i.e., covariant `IEnumerable<T>` result types, type and index inference)
 * All calls have async variants
+* Test
 
 ## Getting Started
 
